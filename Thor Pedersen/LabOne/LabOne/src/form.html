@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="index.html">Home</a>
+        <a href="form.html">Form</a>
+      </nav>
+    </header>
+    <main>
+      <form method="GET">
+        <div>
+          <label for="firstName">First Name</label><br>
+          <input type="text" placeholder="First Name" id="firstName" required/><br>
+          <label for="lastName">Last Name</label><br>
+          <input type="text" placeholder="Last Name" id="lastName" required/><br>
+
+          <label for="one">1</label>
+          <input type="radio" id="one" name="select" value="one"><br>
+          <label for="two">2</label>
+          <input type="radio" id="two" name="select" value="two"><br>
+          <label for="three">3</label>
+          <input type="radio" id="three" name="select" value="three"><br>
+
+          <input type="checkbox" id="choice1" name="choice1" value="Choice1">
+          <label for="choice1"> Choice 1</label><br>
+          <input type="checkbox" id="choice2" name="choice12" value="Choice2">
+          <label for="choice2"> Choice 2</label><br>
+          <input type="checkbox" id="choice3" name="choice13" value="Choice3">
+          <label for="choice3"> Choice 3</label><br> 
+
+          <label for="options">Choose an option:</label>
+          <select name="options" id="options">
+            <option value="one">Option 1</option>
+            <option value="two">Option 2</option>
+            <option value="three">Option 3</option>
+            <option value="four">Option 4</option>
+          </select><br>
+          <button type="submit">Submit form</button>
+        </div>
+      </form>
+    </main>
+    <footer>Copyright 2021 &copy;</footer>
+  </body>
+</html>
