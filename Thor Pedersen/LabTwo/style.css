@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600;700&family=Josefin+Sans:wght@300;400;600&family=Roboto:wght@700&display=swap');
+
+article {
+margin: 20px 0;
+padding: 20px;
+border: 1px solid black;
+}
+
+.style-me1 {
+    color: red;
+}
+
+#style-me2 {
+    color: blue;
+}
+
+.style-me, #style-me2 {
+    color: purple;
+}
+
+.my-descendants-are-styled p {
+    background-color: red;
+}
+
+.my-children-are-styled > p {
+    background-color: red;
+} 
+
+.box {
+    margin: 10px 20px;
+    padding: 15px 25px;
+    border: 10px solid red;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    overflow: auto;
+    background-image: url(./assets/images/img1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.position-absolute {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    z-index: 5;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+.text-style {
+    color: orange;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 800;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    text-align: center;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+a:link {
+    color: orchid;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    font-size: 1.2rem;
+    color: black;
+    background-color: red;
+}
+
+a:active {
+    background-color: yellow;
+  }
+
+ a:focus {
+    background-color: yellow;
+  } 
+
+.calc-style{
+    width: calc(100vw - 100px);
+}
