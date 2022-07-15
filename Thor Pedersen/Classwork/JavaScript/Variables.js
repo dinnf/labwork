@@ -32,3 +32,17 @@ console.log(heroes);
 heroes[1] = "Hulk";
 heroes[4] = "Thomas the Tank Engine";
 console.log(heroes);
+
+// objects
+
+const user = { // an object
+    name: 'joe', // by key 'name' store value 'joe'
+    age : 20, //by key 'age' store value 20
+    'has a dog': false //multi word prop name 'has a dog' store value false
+};
+
+console.log(user.name);
+user.name = "Ben";
+console.log(user.name);
+user["has a dog"] = true;
+console.log(user["has a dog"]);
