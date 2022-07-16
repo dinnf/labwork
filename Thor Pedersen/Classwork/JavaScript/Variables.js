@@ -54,8 +54,16 @@ const username = {
 
 console.log(username);
 
-const player = { name: 'john' };
+const player = { name: 'john', age: 30};
 const anotherUser = Object.create(player);
 anotherUser.age = 15;
 console.log(player);
 console.log(anotherUser);
+console.log(`Another user Name: ${anotherUser.name}`);
+
+const playerClone = {...player};
+
+console.log(playerClone);
+playerClone.name = "Harry";
+console.log(playerClone);
+console.log(player);
