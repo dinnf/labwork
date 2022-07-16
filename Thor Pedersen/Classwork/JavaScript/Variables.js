@@ -53,3 +53,9 @@ const username = {
 };
 
 console.log(username);
+
+const player = { name: 'john' };
+const anotherUser = Object.create(player);
+anotherUser.age = 15;
+console.log(player);
+console.log(anotherUser);
