@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "clonedeep": "^2.0.0"
+  }
+}
