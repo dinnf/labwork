@@ -46,3 +46,10 @@ user.name = "Ben";
 console.log(user.name);
 user["has a dog"] = true;
 console.log(user["has a dog"]);
+
+const funcKey = () => console.log('func as key');
+const username = {
+[funcKey]: 'I am a value of a function'
+};
+
+console.log(username);
