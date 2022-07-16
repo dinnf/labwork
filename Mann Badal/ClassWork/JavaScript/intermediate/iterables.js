@@ -1,7 +1,7 @@
 //Iterables
 
 //Symbol.iterable With plain function
-/*const range = {
+const range = {
   from: 1,
   to: 5,
   [Symbol.iterator]() {
@@ -17,11 +17,12 @@
   },
 };
 for (let num of range) {
+  num=num+num;
   console.log(num); // 1, then 2, 3, 4, 5
-}*/
+}
 
 //Symbol.iterable With generator function
-const range = {
+/*const range = {
   from: 1,
   to: 5,
 };
@@ -32,4 +33,4 @@ range[Symbol.iterator] = function* () {
 };
 for (const num of range) {
   console.log(num);  // 1, 2, 3, 4, 5
-}
+}*/
