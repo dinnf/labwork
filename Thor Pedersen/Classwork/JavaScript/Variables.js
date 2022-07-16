@@ -54,16 +54,112 @@ const username = {
 
 console.log(username);
 
-const player = { name: 'john', age: 30};
+const player = { name: 'john', 
+age: 30,
+sayHi() {
+    console.log(`Hello ${this.name}`);
+}
+};
 const anotherUser = Object.create(player);
 anotherUser.age = 15;
 console.log(player);
 console.log(anotherUser);
 console.log(`Another user Name: ${anotherUser.name}`);
 
-const playerClone = {...player};
+player.sayHi();
 
+const playerClone = {...player};
 console.log(playerClone);
 playerClone.name = "Harry";
-console.log(playerClone);
-console.log(player);
+
+
+//class stuff
+class User {
+    isAdmin = true;
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+const user01 = new User('Thor');
+
+function logOn(user){
+    user.isAdmin ? adminGiven() : notAdmin();
+} 
+
+function adminGiven() {
+    console.log("Admin has logged in");
+}
+
+function notAdmin() {
+    console.log("Sorry, You are not an admin");
+}
+
+logOn(user01);
+
+//Intermediate JS
+
+const n = 1.23456;
+console.log(n.toFixed(2)); // 1.23, an object wrapper for number with method `toFixed()`
+const str = 'hello world';
+console.log(str.toUpperCase()); // we can explicitly create a wrapper
+
+const bleh = {
+    name: 'John',
+    money: 1000,
+    [Symbol.toPrimitive]( hint ) {
+    return hint === 'string' ? `{name: '${this.name}'}` : this.money;
+    }
+};
+    
+    console.log(` ${bleh} `); // hint: string -> {name: "John"}
+    console.log( +bleh ); // hint: number -> 1000
+    console.log(bleh + 500) ; // hint: default -> 1500
+
+    const guestList = "Guests:\n * John\n * Pete\n * Mary";
+
+    console.log(guestList); // a multiline list of guests
+
+   console.log('A'.codePointAt(0));
+   console.log('a'.codePointAt(0));
+
+   console.log([1,2] + 1);
+
+   const arrRnd = ["I", "study", "JavaScript", "right", "now"];
+   arrRnd.splice(0, 3, "Let's", "dance");// remove 3 first elements and replace them with another
+    console.log( arrRnd ) // now ["Let's", "dance", "right", "now"]
+
+    const arrSort = [ 1, 2, 15 ];
+
+    console.log(arrSort.sort()); //1, 15, 2, The items are sorted as strings by default.
+    console.log(arrSort.sort((a, b) => { return a - b; }));// 1, 2, 15
+
+    const arrayLikeObj = { 0: 1, 1:4, 2:8, length: 3};
+    Array.prototype.reduce.call(arrayLikeObj, (acc, curr) => (acc + curr)); // 13
+
+    function foo(a, b, c) {
+        const s = Array.prototype.join.call(arguments); //arguments is an array-like object
+        console.log(s); // '1,a,true'
+    }
+foo(1, 'a', true);
+
+
+const range = {
+    from: 1,
+    to: 5,
+    [Symbol.iterator]() {
+    this.current = this.from;
+    return this;
+    },
+    next() {
+    if (this.current <= this.to) {
+    return { done: false, value: this.current++ };
+    } else {
+    return { done: true };
+    }
+    }
+    };
+    for (let num of range) {
+        num=num+num;
+    console.log(num); // 1, then 2, 3, 4, 5
+}
