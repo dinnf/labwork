@@ -48,5 +48,35 @@ console.log("*****")
 //delayHello = (who) => {setTimeout(console.log("Hello" + who), 300)}
 //delayHello('Denis')
 //console.log(delay(console.log("Hello"),300))
-delayHello = function() {delay("Hello",500)}
-delayHello()
+//delayHello = function() {delay("Hello",500)}
+///delayHello()
+
+
+console.log("*******Intermediate*************")
+function ucFirst(text) {
+    return (text[0].toUpperCase()) + text.substring(1);
+  }
+console.log(ucFirst('john'))
+console.log(ucFirst('peter'))
+
+function truncate(str, maxlength) {
+if (str.length > maxlength) {
+    newstring = str.substring(0, str.length - 3) + "..."
+    return newstring
+  }
+  else {
+    return str
+  }
+}
+console.log(truncate("this string is too long",5))
+console.log(truncate("What I'd like to tell on this topic is:", 20))
+
+// Question 3 Array Operations
+styles = ["Jazz","Blues"]
+styles.push("Rock-N-Roll")
+console.log(styles)
+styles.splice(((styles.length/2)),1,"Classics")
+console.log(styles)
+console.log(styles.shift())
+styles.unshift("Rap","Reggae")
+console.log(styles)
