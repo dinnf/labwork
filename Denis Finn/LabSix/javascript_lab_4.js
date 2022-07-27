@@ -80,3 +80,26 @@ console.log(styles)
 console.log(styles.shift())
 styles.unshift("Rap","Reggae")
 console.log(styles)
+
+
+/* Question 4 4. Translate border-left-width to borderLeftWidth
+Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+That is: removes all dashes, each word after dash becomes uppercased.
+Examples:
+camelize("background-color") == 'backgroundColor';
+camelize("list-style-image") == 'listStyleImage';
+camelize("-webkit-transition") == 'WebkitTransition'; */
+function camelize(str) {
+    let remove_dashes = str.split("-") 
+    console.log(remove_dashes)
+    let first_word_removed = remove_dashes.slice(1)
+    console.log(first_word_removed)
+    const capitalize_words = first_word_removed.map(function(word){
+      return word[0].toUpperCase() + word.slice(1)
+    })
+    console.log(capitalize_words)
+    return remove_dashes[0] + capitalize_words.join("")
+    
+      
+    }
+console.log(camelize("first-second-third"))

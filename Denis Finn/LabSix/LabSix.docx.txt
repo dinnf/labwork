@@ -193,6 +193,9 @@ ________________
 Write a function ucFirst(str) that returns the string str with the capitalized first character, for instance:
         ucFirst("john") == "John";
 
+function ucFirst(text) {
+    return (text[0].toUpperCase()) + text.substring(1);
+  }
 
 2. Truncate the text
 Create a function truncate(str, maxlength) that checks the length of the str and, if it exceeds maxlength – replaces the end of str with the ellipsis character "…", to make its length equal to maxlength.
@@ -207,6 +210,15 @@ truncate("What I'd like to tell on this topic is:", 20) = "What I'd like to te�
 
 truncate("Hi everyone!", 20) = "Hi everyone!"
 
+function truncate(str, maxlength) {
+if (str.length > maxlength) {
+    newstring = str.substring(0, str.length - 3) + "..."
+    return newstring
+  }
+  else {
+    return str
+  }
+}
 
 3. Array operations
 Let’s try 5 array operations.
@@ -221,6 +233,17 @@ Jazz, Blues, Rock-n-Roll
 Jazz, Classics, Rock-n-Roll
 Classics, Rock-n-Roll
 Rap, Reggae, Classics, Rock-n-Roll
+
+styles = ["Jazz","Blues"]
+styles.push("Rock-N-Roll")
+console.log(styles)
+styles.splice(((styles.length/2)),1,"Classics")
+console.log(styles)
+console.log(styles.shift())
+styles.unshift("Rap","Reggae")
+console.log(styles)
+
+
 4. Translate border-left-width to borderLeftWidth
 Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
 That is: removes all dashes, each word after dash becomes uppercased.
@@ -229,7 +252,19 @@ camelize("background-color") == 'backgroundColor';
 camelize("list-style-image") == 'listStyleImage';
 camelize("-webkit-transition") == 'WebkitTransition';
 
-
+function camelize(str) {
+    let remove_dashes = str.split("-") // takes out the dashes
+    console.log(remove_dashes)
+    let first_word_removed = remove_dashes.slice(1) // removes 1st word
+    console.log(first_word_removed)
+    const capitalize_words = first_word_removed.map(function(word){
+      return word[0].toUpperCase() + word.slice(1) // capitalises words that need to be capitalised
+    })
+    console.log(capitalize_words)
+    return remove_dashes[0] + capitalize_words.join("")
+    
+      
+    }
 
 
 5. Create an extendable calculator

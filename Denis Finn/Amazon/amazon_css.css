@@ -1,0 +1,46 @@
+* {
+   /* background-color: lightgreen; */
+}
+#container {
+    display:flex;
+    flex-wrap: no-wrap;
+    justify-content: space-evenly;
+    padding:5px;
+    margin:5px;
+    background-color: darkblue;
+    height:40px;
+    text-align: left;
+    vertical-align:middle;
+    line-height:40px;
+    color:white;
+    gap: 10px;
+}
+
+#search-bar {   
+    flex-grow: 3;
+    background-color: white;
+    color:black;
+}
+
+#heading-two {
+    display: flex;
+    justify-content:flex-start;
+    background-color: blue;
+    color: white;
+    gap: 10px;
+}
+
+#boxes {
+    display:flex;
+    flex-wrap:wrap;
+    flex-basis:20%;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+#boxes > div {
+    width: 25%;
+    height:200px;
+    background-color: lightgreen;
+}

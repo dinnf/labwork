@@ -23,3 +23,5 @@ rl2.question("Second number?", function (answer2){
     rl2.close();
 })
 //console.log(answer1 + answer2)
+
+const delay = (func,ms) => setTimeo
