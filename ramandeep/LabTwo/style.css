@@ -9,11 +9,50 @@ border:1px solid blue;
 }
 #style-me2{
     color:blue;
+}
+    #style-me2.style-me1{
+        color: aqua;
 
-    .my-descendants-are-styled p 
+    }
+.my-descendants-are-styled p 
     {
     background-color :red;
 }
-.my-children-are-styled > p{
+.my-children-are-styled > p {
     background-color: aqua;
+}
+
+/*BOX MODEL*/
+.box{
+    
+     margin: 10px 20px;
+    padding: 15px 25px;
+    border: 10px solid red;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    /*height:100vw;
+    width:100vw;//Text readjusted according to window height without loosing its contents.*/
+    
+    /* BORDER*/
+
+    border-style: 10px solid blue;
+    border-color: pink;
+    width:50px;
+     height:50px;
+     box-sizing: border-box;
+     text-overflow: ellipsis;*/
+    overflow: auto;
+    background-image: url(./assets/images/img1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*POSITIONING*/
+.position-absolute{
+    position:absolute;
+}
+.position-relative{
+    position:relative;
 }
