@@ -9,6 +9,7 @@ body {
     background-color: lightgray;
     margin: auto;
     margin-top: 5px;
+    max-width: auto;
 }
 .row::after {
     content: "";
@@ -42,9 +43,9 @@ body {
   }
 
 .container {
-    max-width: 60%;
     margin: auto;
     text-align: center;
+    max-width: 100%;
     
 /*     display: flex;
     flex-direction: row;
@@ -53,7 +54,7 @@ body {
 
 @media only screen and (max-width: 1080px) {
     .container {
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -66,7 +67,6 @@ img {
  }
 
 .left-container {
-    margin-left: 10px;
     background-color: rgba(85, 107, 47, 0.6);
     padding: 10px;
     margin-top: 10px;
@@ -104,7 +104,6 @@ hr {
 }
 
 .right-container {
-    margin-left: 10px;
     margin-top: 10px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -119,7 +118,15 @@ hr {
 footer {
     background-color: darkolivegreen;
     text-align: center;
+    width: 100%;
     padding: 15px;
     height: 50px;
     margin: auto;
+    margin-top: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.printArea {
+    margin: auto;
+    max-width: 60%;
 }
