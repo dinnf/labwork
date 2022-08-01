@@ -1,0 +1,38 @@
+/*console.log(typeof(1));
+function testNum(a){
+let result;
+if(a>50)
+{
+result="PASS";
+}
+else{
+result="FAIL";
+}
+return result;
+}
+console.log(testNum(80));
+console.log(testNum(44));*/
+/*const a=60;
+const b=(a>50)?"PASS" : "FAIL";
+console.log(b);*/
+/*dclr();
+function dclr()
+{
+console.log("function");
+}*/
+
+/*const func=()=> {
+console.log("hello");
+}*/
+/*const a="hi";
+const say()
+{
+console.log(this.a);
+}
+a.say();*/
+let x=0;
+while(x<5)
+{
+console.log(x);
+}
+
