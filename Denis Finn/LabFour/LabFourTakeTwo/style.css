@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: center;
+}
+h1 {
+    font-size: 25px;
+    margin-top:45px;
+}
+#right-side {
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+
+}
+#left-side {
+    background-color: rgb(82,92,228);
+    width: 20%;
+}
+img {
+    width: 80%;
+    border-radius:50%;
+}
+#personal, #skills {
+    background-color: rgb(121,130,234);
+}
+.skills {
+    padding: 25px;
+}
+.skills-elements {
+    display:flex;
+    justify-items: space-between;
+}
+footer {
+    text-align: center;
+    background-color: rgb(121,130,234);
+}
