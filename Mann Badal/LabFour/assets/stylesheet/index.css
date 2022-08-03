@@ -17,6 +17,7 @@ body {
     display: table;
   }
   
+  
   [class*="col-"] {
     float: left;
   }
