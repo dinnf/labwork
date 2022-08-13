@@ -18,4 +18,4 @@ function getSecondsToday() {
   
   console.log( getSecondsToday() );
 
-  console.log(Date())
+console.log(Date())
