@@ -96,9 +96,13 @@ const hello = ( who )=> console.log(‘Hello ’ + who );
 const delalyHello = delay(hello, 300);
 delayHello(‘world’);
 
-delayHello = (who) => delay(console.log('Hello"+ who),300)
+const delay = (func, ms) => (arg) => setTimeout(() => func(arg), ms);
 
-delayHello = (who) => {setTimeout(console.log("Hello" + who), 300)}
+const hello = (who) => console.log("Hello " + who);
+
+const delayHello = delay(hello, 300);
+
+delayHello("world");
 
 
 
@@ -312,6 +316,17 @@ let values = ["Hare", "Krishna", "Hare", "Krishna",
 
 alert( unique(values) ); // Hare, Krishna, :-O
 P.S. Here strings are used, but can be values of any type.
+
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"]
+function unique(arr) {
+  let uniqueValues = [...new Set(arr)]
+  console.log(uniqueValues)
+}
+
+unique(values)
+
+
 7. Iterable keys
 We’d like to get an array of map.keys() in a variable and then apply array-specific methods to it, e.g. .push.
 But that doesn’t work:
@@ -321,6 +336,10 @@ let keys = map.keys();
 // Error: keys.push is not a function
 keys.push("more");
 Why? How can we fix the code to make keys.push work?
+map.keys is iterable but is not an array so array methods don't work.
+It can be converted to an array using Array.from
+
+
 8. Store "unread" flags
 There’s an array of messages:
 
@@ -349,6 +368,17 @@ let salaries = {
 
 
 alert( sumSalaries(salaries) ); // 650
+
+function sumSalaries(obj) {
+  console.log(Object.values(obj))
+  let x = Object.values(obj)
+  let sum = 0
+  x.forEach(objj => {sum += objj})
+  console.log(sum)
+  return sum
+
+}
+sumSalaries(salaries)
 10. The maximal salary
 There is a salaries object:
 const salaries = {
@@ -360,11 +390,37 @@ Create the function topSalary(salaries) that returns the name of the top-paid pe
 * If salaries is empty, it should return null.
 * If there are multiple top-paid persons, return any of them.
 P.S. Use Object.entries and destructuring to iterate over key/value pairs.
+
+function topSalary(salaries) {
+
+  let maxSalary = 0;
+  let maxName = null;
+
+  for(const [name, salary] of Object.entries(salaries)) {
+    if (maxSalary < salary) {
+      maxSalary = salary;
+      maxName = name;
+    }
+  }
+
+  return maxName;
+}
 11. How many seconds have passed today?
 Write a function getSecondsToday() that returns the number of seconds from the beginning of today.
 For instance, if now were 10:00 am, and there was no daylight savings shift, then:
 getSecondsToday() == 36000 // (3600 * 10)
+
+
+
+alert( getSecondsToday() );
 The function should work in any day. That is, it should not have a hard-coded value of “today”.
+
+function getSecondsToday() {
+  let newDate = new Date();
+  return newDate.getHours() * 3600 + newDate.getMinutes() * 60 + newDate.getSeconds();
+}
+
+
 12. Exclude backreferences
 
 

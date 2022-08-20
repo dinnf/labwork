@@ -88,7 +88,8 @@ That is: removes all dashes, each word after dash becomes uppercased.
 Examples:
 camelize("background-color") == 'backgroundColor';
 camelize("list-style-image") == 'listStyleImage';
-camelize("-webkit-transition") == 'WebkitTransition'; */
+camelize("-webkit-transition") == 'WebkitTransition'; 
+
 function camelize(str) {
     let remove_dashes = str.split("-") 
     console.log(remove_dashes)
@@ -103,3 +104,74 @@ function camelize(str) {
       
     }
 console.log(camelize("first-second-third"))
+
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"]
+function unique(arr) {
+  let uniqueValues = [...new Set(arr)]
+  console.log(uniqueValues)
+}
+
+unique(values)
+
+let map = new Map();
+map.set("name", "John");
+let keys = map.keys();
+// Error: keys.push is not a function
+//keys.push("more");
+let arrayKeys = Array.from(map.keys())
+arrayKeys.push('more')
+console.log(arrayKeys)
+let messages = [
+  {text: "Hello", from: "John"},
+  {text: "How goes?", from: "John"},
+  {text: "See you soon", from: "Alice"}
+];
+
+let readMessages = new WeakSet();
+
+// two messages have been read
+readMessages.add(messages[0]);
+readMessages.add(messages[1]);
+// readMessages has 2 elements
+
+// ...let's read the first message again!
+readMessages.add(messages[0]);
+// readMessages still has 2 unique elements
+
+// answer: was the message[0] read?
+alert("Read message 0: " + readMessages.has(messages[0])); // true
+
+messages.shift();
+// now readMessages has 1 element (technically memory may be cleaned later)
+*/
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250,
+};
+
+function sumSalaries(obj) {
+  console.log(Object.values(obj))
+  let x = Object.values(obj)
+  let sum = 0
+  x.forEach(objj => {sum += objj})
+  console.log(sum)
+  return sum
+
+}
+sumSalaries(salaries)
+
+
+
+const time = new Date()
+console.log(Date()[0])
+console.log(time[0])
+console.log(time)
+function getSecondsToday() {
+  let newDate = new Date();
+  console.log(newDate.getHours() * 3600 + newDate.getMinutes() * 60 + newDate.getSeconds());
+  return newDate.getHours() * 3600 + newDate.getMinutes() * 60 + newDate.getSeconds()
+}
+getSecondsToday()
