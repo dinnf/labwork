@@ -17,3 +17,7 @@ socket.emit("howdy", " I am a Client");
 socket.on("number", (arg) => {
     console.log("Message from Server - number : "+arg);
 })
+
+socket.on("2ndnumber", (arg) => {
+    console.log("Message from Server - 2ndnumber : "+arg);
+})
