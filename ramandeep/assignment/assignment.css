@@ -1,0 +1,145 @@
+.grid-container{
+    display:grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+    /*gap: 10px;
+   padding: 10px;*/}
+
+.item1 { grid-area: header;
+    text-align: center;
+    margin-top:1px;
+    height:5px;    
+    position:sticky
+}
+.item2 { grid-area: menu; 
+padding-top: 1px;
+text-align:start;
+position:sticky;
+}
+.item3 {grid-area: main;
+    border:2px solid black;
+    margin-top: 50px;
+    width:90vw;
+    height: 110vh;
+}
+    .item4 { grid-area: footer; 
+    height:50vh;
+    width:80vw;
+    margin: 2px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 10px; 
+}
+
+.fa{
+    size:24px;
+    color:BLACK;
+}
+
+.icon{
+    text-align: end;
+}
+
+.search{
+    text-align: centre;
+    position: static;
+}
+.header{
+    text-align: start;
+    position:absolute;
+}   
+  .box3{
+    margin:10px;
+    width:1010px;
+    height:200px;  
+  }
+.d-flex1{
+    display: flex;
+    justify-content: space-between;
+    border:2px solid black;
+    padding:10px;
+    margin:50px;
+}
+.d-flex1>div{
+    width:500px;
+}
+.flex2{
+    justify-content:first baseline;
+    display: flex;
+    gap:400px;
+  margin-left:45px;
+margin-top:5px;
+border:2px solid black;
+width:1200px;
+}
+.flex3{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+margin-left:45px;
+margin-top:20px;
+border:2px solid black;
+height:185px;
+width:1200px;
+}
+flex4{
+    margin-top:0px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  .button1{
+    background-color: green;}
+    .button2{
+        background-color: red;
+    }
+    .button3{
+        background-color: aqua;
+    }
+    #bar1{
+        color: green;
+    }
+    #bar2{
+       color:red;
+    }
+    #bar3{
+      color: rgb(93, 33, 93);
+    }
+    #bar4{
+        color:blue;
+    }
+    #bar5{
+        color: rgb(26, 182, 221);
+    }
+    #bar6{
+        color: orange;
+    }
+    .p1{
+        color:"blue";
+    }
+    .flexbox{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width:100vw;
+    margin-top: 20px;;
+
+    }
+    @media only screen and (max-width:800px) {
+        .main {
+          width: 80%;
+          padding: 0;
+        }
+        .right {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width:500px) {
+        .menu, .main, .right {
+          width: 100%;
+        }
+      }
